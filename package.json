@@ -12,6 +12,12 @@
     "test": "jest --watchAll --verbose",
     "tsc": "tsc"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "commit-msg": "commitlint --edit $HUSKY_GIT_PARAMS"
+    }
+  },
   "dependencies": {
     "mongoose": "^5.9.7",
     "config": "^3.3.1",
